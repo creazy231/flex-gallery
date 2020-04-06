@@ -1,28 +1,20 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+	<div id="app">
+		<flex-gallery images="http://expose-generator.qwellco.de/resources/expose_resources/1/3/276/Immobilie_01.jpg" max-height="180px" />
+		<flex-gallery images="https://tobias-thiele.de/admin/wp-content/uploads/20170617-_MG_5554-1-2-2.jpg" max-height="180px" />
+	</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+	import Vue from 'vue'
+    import FlexGallery from "./components/FlexGallery";
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
+    export default {
+        name: 'app',
+        components: {FlexGallery},
+		beforeMount() {
+            window.Vue = Vue;
+        }
+    }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
