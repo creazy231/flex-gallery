@@ -1,9 +1,7 @@
 <template>
-	<div class="gallery" :style="`--col: ${col}; --gap: ${gap}; --maxHeight: ${maxHeight};`">
+	<div class="gallery" :style="`--col: ${col}; --gap: ${gap}; --maxHeight: ${maxHeight}; --height: ${height};`">
 		<div v-for="(thumbnail, index) in thumbnails" :key="`image-${index}`" class="image-rate">
-			<a href="#" v-on:click.prevent="openImage(index)">
-				<img :src="thumbnail" alt="One image of the gallery">
-			</a>
+			<a href="#" v-on:click.prevent="openImage(index)" :style="'background-image: url('+ thumbnail +')'"></a>
 		</div>
 	</div>
 </template>
@@ -30,13 +28,20 @@
                     return '15px'
 				}
 			},
-            maxHeight: {
-                type: String,
-                required: false,
-                default() {
-                    return '235px'
-                }
-            },
+	        maxHeight: {
+		        type: String,
+		        required: false,
+		        default() {
+			        return '235px'
+		        }
+	        },
+	        height: {
+		        type: String,
+		        required: false,
+		        default() {
+			        return '200px'
+		        }
+	        },
         },
 
         methods: {
@@ -61,6 +66,14 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+
+			a {
+				width: 100%;
+				height: var(--height);
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
 
 			img {
 				width: 100%;
