@@ -1,5 +1,6 @@
 <template>
-	<div v-if="images_store.length && thumbnails_store.length">
+	<div v-if="images_store.length && thumbnails_store.length" class="flex-gallery" :class="'flex-gallery-'+customRef">
+		<link v-if="customStyles" rel="stylesheet" type="text/css" :href="customStyles">
 		<gallery-images v-on:open-image="displayImageLink" :gap="gap" :col="col" :maxHeight="maxHeight" :height="height" :width="width" :images="images_store" :thumbnails="thumbnails_store" :border="border" :borderColor="borderColor" />
 		<image-link v-on:close-image="display = false" :images="images_store" :display="display" :index="index" class="noselect" />
 	</div>
@@ -29,6 +30,14 @@
         name: 'flex-gallery',
         components: {ImageLink, GalleryImages },
         props: {
+	        customRef: {
+		        type: String,
+		        required: false,
+	        },
+	        customStyles: {
+		        type: String,
+		        required: false,
+	        },
             images: {
                 required: true,
 			},
