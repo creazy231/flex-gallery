@@ -1,5 +1,5 @@
 <template>
-	<div class="gallery" :style="`--col: ${col}; --gap: ${gap}; --maxHeight: ${maxHeight}; --height: ${height};`">
+	<div class="gallery" :style="`--col: ${col}; --gap: ${gap}; --maxHeight: ${maxHeight}; --height: ${height}; --border: ${border}; --borderColor: ${borderColor}; --width: ${width};`">
 		<div v-for="(thumbnail, index) in thumbnails" :key="`image-${index}`" class="image-rate">
 			<a href="#" v-on:click.prevent="openImage(index)" :style="'background-image: url('+ thumbnail +')'"></a>
 		</div>
@@ -37,9 +37,27 @@
 	        },
 	        height: {
 		        type: String,
+		        required: false
+	        },
+	        width: {
+		        type: String,
 		        required: false,
 		        default() {
-			        return '200px'
+			        return '1fr'
+		        }
+	        },
+	        border: {
+		        type: String,
+		        required: false,
+		        default() {
+			        return '0px'
+		        }
+	        },
+	        borderColor: {
+		        type: String,
+		        required: false,
+		        default() {
+			        return '#000000'
 		        }
 	        },
         },
@@ -55,7 +73,7 @@
 <style lang="scss">
 	.gallery {
 		display: grid;
-		grid-template-columns: repeat(var(--col), 1fr);
+		grid-template-columns: repeat(var(--col), var(--width));
 		grid-gap: var(--gap);
 		line-height: 0;
 
@@ -66,6 +84,9 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			border: var(--border);
+			border-color: var(--borderColor);
+			border-style: solid;
 
 			a {
 				width: 100%;

@@ -1,6 +1,6 @@
 <template>
 	<div v-if="images_store.length && thumbnails_store.length">
-		<gallery-images v-on:open-image="displayImageLink" :gap="gap" :col="col" :maxHeight="maxHeight" :height="height" :images="images_store" :thumbnails="thumbnails_store" />
+		<gallery-images v-on:open-image="displayImageLink" :gap="gap" :col="col" :maxHeight="maxHeight" :height="height" :width="width" :images="images_store" :thumbnails="thumbnails_store" :border="border" :borderColor="borderColor" />
 		<image-link v-on:close-image="display = false" :images="images_store" :display="display" :index="index" class="noselect" />
 	</div>
 </template>
@@ -47,19 +47,34 @@
                     return '15px'
                 }
             },
-            maxHeight: {
+	        maxHeight: {
+		        type: String,
+		        required: false
+	        },
+	        height: {
+		        type: String,
+		        required: false,
+		        default() {
+			        return '300px'
+		        }
+	        },
+	        width: {
+		        type: String,
+		        required: false,
+		        default() {
+			        return '1fr'
+		        }
+	        },
+            border: {
                 type: String,
-                required: false,
-                default() {
-                    return '235px'
-                }
+                required: false
             },
-            height: {
+            borderColor: {
                 type: String,
                 required: false,
-                default() {
-                    return '300px'
-                }
+	            default() {
+		            return '#000000'
+	            }
             },
         },
 
