@@ -24,7 +24,7 @@ now you can use the Flex Gallery as follows:
 <flex-gallery images="https://picsum.photos/id/10/200/300,https://picsum.photos/id/1000/200/300,https://picsum.photos/id/1003/200/300,https://picsum.photos/id/1004/200/300,https://picsum.photos/id/1005/200/300,https://picsum.photos/id/1012/200/300,https://picsum.photos/id/1015/200/300,https://picsum.photos/id/1020/200/300" />
 ```
 
-##Arguments
+## Arguments
 | **argument**     	| **type**   	| **required** 	| **default** 	| **description**                                                                       	|
 |--------------	|--------	|----------	|---------	|-----------------------------------------------------------------------------------	|
 | images       	| String 	| true     	|         	| String of image URLs **serarated by comma**                                           	|
@@ -38,4 +38,5 @@ now you can use the Flex Gallery as follows:
 | borderColor  	| String 	| false    	| #000000 	| border color of each element inside the gallery grid                              	|
 | customRef    	| String 	| false    	|         	| add a custom class to the gallery to select this gallery using `customStyles`     	|
 | customStyles 	| String 	| false    	|         	| link to custom style sheet                                                        	|
+
 To manually style the grid of the gallery in `customStyles` please use CSS-Grid https://css-tricks.com/snippets/css/complete-guide-grid/
