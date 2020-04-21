@@ -1,6 +1,6 @@
 <template>
 	<div id="app">
-		<flex-gallery images="https://expose.imogent.com/resources/expose_resources/1/19/1839/5.8%20Badezimmer.jpg,https://expose.imogent.com/resources/expose_resources/1/19/1840/5.8%20K%C3%BCch.jpg,https://expose.imogent.com/resources/expose_resources/1/19/1841/5.8%20Kuech_2.jpg,https://expose.imogent.com/resources/expose_resources/1/19/1842/5.8%20Wohnzimmer.jpg" height="199px" width="205px" border="3px" border-color="green" customStyles="http://expose-generator.thiele/qcode_css/temp/stylesheet_sparkasse.css" customRef="test" />
+		<flex-gallery images="https://picsum.photos/id/10/200/300,https://picsum.photos/id/1000/200/300,https://picsum.photos/id/1003/200/300,https://picsum.photos/id/1004/200/300,https://picsum.photos/id/1005/200/300,https://picsum.photos/id/1012/200/300,https://picsum.photos/id/1015/200/300,https://picsum.photos/id/1020/200/300" />
 	</div>
 </template>
 
