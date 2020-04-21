@@ -1,5 +1,9 @@
 # Web Component Flex Gallery
 
+![](https://i.imgur.com/Fae8Qla.png)
+
+![](https://i.imgur.com/jJ2vIDT.png)
+
 ## Project setup / development / build
 ```
 # Project setup
