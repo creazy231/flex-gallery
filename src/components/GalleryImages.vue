@@ -1,7 +1,7 @@
 <template>
 	<div class="gallery" :style="`--col: ${col}; --gap: ${gap}; --maxHeight: ${maxHeight}; --height: ${height}; --border: ${border}; --borderColor: ${borderColor}; --width: ${width};`">
 		<div v-for="(thumbnail, index) in thumbnails" :key="`image-${index}`" class="image-rate">
-			<a href="#" v-on:click.prevent="openImage(index)" :style="'background-image: url('+ thumbnail +')'"></a>
+			<a href="#" v-on:click.prevent="openImage(index)" :style="generateBackgroundImageURL(thumbnail)"></a>
 		</div>
 	</div>
 </template>
@@ -65,6 +65,9 @@
         methods: {
             openImage(index) {
                 this.$emit('open-image', index);
+			},
+			generateBackgroundImageURL(thumbnail) {
+            	return 'background-image: url("'+ thumbnail +'")';
 			}
 		}
     }

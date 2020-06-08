@@ -9776,12 +9776,12 @@ var es_string_replace = __webpack_require__("5319");
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.split.js
 var es_string_split = __webpack_require__("1276");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"f73e0ae4-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/GalleryImages.vue?vue&type=template&id=4d07dfda&
-var GalleryImagesvue_type_template_id_4d07dfda_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"gallery",style:(("--col: " + _vm.col + "; --gap: " + _vm.gap + "; --maxHeight: " + _vm.maxHeight + "; --height: " + _vm.height + "; --border: " + _vm.border + "; --borderColor: " + _vm.borderColor + "; --width: " + _vm.width + ";"))},_vm._l((_vm.thumbnails),function(thumbnail,index){return _c('div',{key:("image-" + index),staticClass:"image-rate"},[_c('a',{style:('background-image: url('+ thumbnail +')'),attrs:{"href":"#"},on:{"click":function($event){$event.preventDefault();return _vm.openImage(index)}}})])}),0)}
-var GalleryImagesvue_type_template_id_4d07dfda_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"f73e0ae4-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/GalleryImages.vue?vue&type=template&id=4c687300&
+var GalleryImagesvue_type_template_id_4c687300_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"gallery",style:(("--col: " + _vm.col + "; --gap: " + _vm.gap + "; --maxHeight: " + _vm.maxHeight + "; --height: " + _vm.height + "; --border: " + _vm.border + "; --borderColor: " + _vm.borderColor + "; --width: " + _vm.width + ";"))},_vm._l((_vm.thumbnails),function(thumbnail,index){return _c('div',{key:("image-" + index),staticClass:"image-rate"},[_c('a',{style:(_vm.generateBackgroundImageURL(thumbnail)),attrs:{"href":"#"},on:{"click":function($event){$event.preventDefault();return _vm.openImage(index)}}})])}),0)}
+var GalleryImagesvue_type_template_id_4c687300_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/GalleryImages.vue?vue&type=template&id=4d07dfda&
+// CONCATENATED MODULE: ./src/components/GalleryImages.vue?vue&type=template&id=4c687300&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/GalleryImages.vue?vue&type=script&lang=js&
 
@@ -9862,6 +9862,10 @@ var GalleryImagesvue_type_template_id_4d07dfda_staticRenderFns = []
   methods: {
     openImage(index) {
       this.$emit('open-image', index);
+    },
+
+    generateBackgroundImageURL(thumbnail) {
+      return 'background-image: url("' + thumbnail + '")';
     }
 
   }
@@ -9883,8 +9887,8 @@ if (style0.__inject__) style0.__inject__(context)
 
 var component = normalizeComponent(
   components_GalleryImagesvue_type_script_lang_js_,
-  GalleryImagesvue_type_template_id_4d07dfda_render,
-  GalleryImagesvue_type_template_id_4d07dfda_staticRenderFns,
+  GalleryImagesvue_type_template_id_4c687300_render,
+  GalleryImagesvue_type_template_id_4c687300_staticRenderFns,
   false,
   injectStyles,
   null,
